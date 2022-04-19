@@ -3,6 +3,9 @@ import org.junit.Test;
 
 public class CensusAnalyzerStateCodeTest {
 
+ RecordMatch
+    private static final String INDIA_CENSUS_CSV_PATH = "C:\\Users\\singh\\IdeaProjects\\censusanalyser\\src\\main\\resourcesresources\\IndiaStateCode.csv";
+
     private static final String INDIA_CENSUS_CSV_PATH = "C:\\Users\\singh\\IdeaProjects\\censusanalyser\\src\\main\\resources\\IndiaStateCode.csv";
 
     @Test
