@@ -9,6 +9,7 @@ import java.util.Iterator;
 import java.util.stream.StreamSupport;
 
 public class CensusAnalyzer {
+
     public int loadIndiaCensusData(String csvPath) throws CensusAnalyzerException {
 
         try (Reader reader = Files.newBufferedReader(Paths.get(csvPath))) {
@@ -29,4 +30,3 @@ public class CensusAnalyzer {
 
     }
 }
-
