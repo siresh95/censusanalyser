@@ -3,17 +3,19 @@ import org.junit.Test;
 
 public class CensusAnalyzerTest {
 
-    private static final String INDIA_CENSUS_CSV_PATH_DELIMETER = "F:\\indian-state-census-analyzer\\src//main\\resources\\IndiaStateCensusData.pdf";
+    private static final String INDIA_CENSUS_CSV_PATH_HEADER = "C:\\Users\\singh\\IdeaProjects\\censusanalyser\\src\\main\\resources\\IndiaStateCensusDataHeader.csv";
 
-    //UseCase 1.4 Path is correct but delimiter incorrect
+    //UseCase 1.5 Path is correct but in csv file header incorrect
     @Test
-    public void givenIndianCensusCSVFileReturnsIncorrectDelimeter(){
+    public void givenIndianCensusCSVFileHaveIncorrectHeader() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH_DELIMETER);
-            Assert.assertTrue("Wrong delimiter", true);
+            censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH_HEADER);
+            Assert.assertTrue("Wrong header in csv file", true);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
         }
+
     }
+
 }
