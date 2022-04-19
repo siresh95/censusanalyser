@@ -12,7 +12,7 @@ public class CensusAnalyzerTest {
     public void givenIndianCensusCSVFileReturnsCorrectRecords() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_CENSUS_CSV_PATH);
+            int numOfRecord = censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH);
             Assert.assertEquals(29, numOfRecord);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
@@ -24,7 +24,7 @@ public class CensusAnalyzerTest {
     public void givenIndianCensusCSVFileReturnsInCorrectRecords() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_CENSUS_CSV_PATH);
+            int numOfRecord = censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH);
             Assert.assertNotEquals(30, numOfRecord);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
@@ -36,7 +36,7 @@ public class CensusAnalyzerTest {
     public void givenIndianCensusCSVFileReturnsInCorrecFileType_But_PathShouldBeCorrect() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            int numOfRecord = censusAnalyzer.loadIndiaStateCodeData(INDIA_CENSUS_CSV_WRONG_FILETYPE);
+            int numOfRecord = censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_WRONG_FILETYPE);
             Assert.assertEquals(29, numOfRecord);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class CensusAnalyzerTest {
     public void givenIndianCensusCSVFileReturnsIncorrectDelimeter() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            censusAnalyzer.loadIndiaStateCodeData(INDIA_CENSUS_CSV_PATH_DELIMETER);
+            censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH_DELIMETER);
             Assert.assertTrue("Wrong delimiter", true);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
@@ -60,7 +60,7 @@ public class CensusAnalyzerTest {
     public void givenIndianCensusCSVFileHaveIncorrectHeader() {
         CensusAnalyzer censusAnalyzer = new CensusAnalyzer();
         try {
-            censusAnalyzer.loadIndiaStateCodeData(INDIA_CENSUS_CSV_PATH_HEADER);
+            censusAnalyzer.loadIndiaCensusData(INDIA_CENSUS_CSV_PATH_HEADER);
             Assert.assertTrue("Wrong header in csv file", true);
         } catch (CensusAnalyzerException e) {
             e.printStackTrace();
