@@ -9,6 +9,6 @@ public class CensusAnalyzerException extends Exception {
     }
 
     enum ExceptionType {
-        INCORRECT_HEADEREXCEPTION;
+        CSV_FILE_PROBLEM;
     }
 }
